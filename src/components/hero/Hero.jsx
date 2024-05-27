@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './hero.css';
-import heroIMg from '../../assets/Section.png'
 
 const Hero = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -8,14 +7,11 @@ const Hero = () => {
         {
             title: "Fresh Vegetables\nBig discount",
             subtitle: "Save up to 50% off on your first order",
-            backgroundImage: "heroImg"
         },
         {
             title: "Organic Fruits\nBig discount",
             subtitle: "Save up to 40% off on your first order",
-            backgroundImage: "heroImg"
         },
-        // Add more slides as needed
     ];
 
     const nextSlide = () => {

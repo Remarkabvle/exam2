@@ -48,6 +48,7 @@
     font-size: 1em;
     border: none;
     background-color: #4caf50; /* Adjust the button color to match your design */
+
     cursor: pointer;
     border-radius: 0 5px 5px 0;
     outline: none;
@@ -82,22 +83,4 @@ button.prev:hover, button.next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 1.8em;
-    }
 
-    .hero-content p {
-        font-size: 1em;
-    }
-
-    .hero-container {
-        height: 300px; /* Adjust height for smaller screens */
-    }
-
-    button.prev, button.next {
-        font-size: 1.5em;
-        padding: 5px;
-    }
-}

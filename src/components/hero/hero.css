@@ -81,21 +81,4 @@ button.next {
 button.prev:hover, button.next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 1.8em;
-  }
-  .hero-content p {
-    font-size: 1em;
-  }
-  .hero-container {
-    height: 300px; /* Adjust height for smaller screens */
-  }
-  button.prev, button.next {
-    font-size: 1.5em;
-    padding: 5px;
-  }
-}
 /*# sourceMappingURL=hero.css.map */
