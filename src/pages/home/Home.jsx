@@ -3,6 +3,8 @@ import './home.scss'
 import Hero from '../../components/hero/Hero'
 import FeaturedCategories from '../../components/FeaturedCategories/FeaturedCategories'
 import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts'
+import ProductList from '../../components/products/Products'
+import AboutGet from '../../components/abuotget/AboutGet'
 
 const Home = () => {
 
@@ -12,6 +14,8 @@ const Home = () => {
       <Hero/>
       <FeaturedCategories/>
       <FeaturedProducts/>
+      <ProductList/>
+      <AboutGet/>
     </div>
   )
 }

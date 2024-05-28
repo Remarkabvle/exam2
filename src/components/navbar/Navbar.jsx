@@ -7,9 +7,6 @@ const Navbar = () => {
   let { pathname } = useLocation();
   let isLogin = localStorage.getItem("x-auth-token");
 
-  if (pathname.includes("register") || pathname.includes("admin")) {
-    return <></>;
-  }
 
   return (
     <>

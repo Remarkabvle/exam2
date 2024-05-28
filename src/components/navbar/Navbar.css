@@ -29,7 +29,7 @@
 }
 
 .container {
-  width: 85%;
+  width: 90%;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -44,16 +44,11 @@
   flex-wrap: wrap;
 }
 
-.custom-header-left .custom-logo {
-  height: 40px;
-}
-
 .custom-header-middle {
   display: flex;
   align-items: center;
   flex-grow: 1;
   margin: 0 20px;
-  flex-wrap: wrap;
 }
 
 .custom-header-middle .custom-categories {

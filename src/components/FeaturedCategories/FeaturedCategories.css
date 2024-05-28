@@ -14,24 +14,28 @@ body {
 
 .categories-container h2 {
   margin-bottom: 20px;
-  text-align: center;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38.4px;
 }
 
 .categories {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
 }
 
 .category {
-  background-color: #f9f9f9;
   border-radius: 10px;
   padding: 20px;
-  max-width: 170px !important;
+  min-width: 170px;
+  max-width: 170px;
   text-align: center;
-  flex: 1 1 calc(25% - 20px);
-  max-width: calc(25% - 20px);
+  flex: 0 0 auto;
   transition: transform 0.2s;
 }
 
@@ -56,19 +60,19 @@ body {
 
 @media (max-width: 1200px) {
   .category {
-    flex: 1 1 calc(33.33% - 20px);
-    max-width: calc(33.33% - 20px);
+    min-width: 150px;
+    max-width: 150px;
   }
 }
 @media (max-width: 768px) {
   .category {
-    flex: 1 1 calc(50% - 20px);
-    max-width: calc(50% - 20px);
+    min-width: 130px;
+    max-width: 130px;
   }
 }
 @media (max-width: 480px) {
   .category {
-    flex: 1 1 100%;
+    min-width: 100%;
     max-width: 100%;
   }
 }

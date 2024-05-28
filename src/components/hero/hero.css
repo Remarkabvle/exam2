@@ -1,30 +1,33 @@
 .hero-container {
+  margin-top: 30px !important;
   background-size: cover;
-  background-position: center;
-  padding: 50px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  padding: 60px 80px;
   border-radius: 20px;
   position: relative;
-  height: 400px; /* Adjust height as needed */
+  height: 400px;
   transition: background-image 0.5s ease-in-out;
-  background: rgba(164, 216, 85, 0.707) !important;
+  flex-direction: column;
 }
 
 .hero-content {
   max-width: 600px;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .hero-content h1 {
-  font-size: 2.5em;
+  font-size: 58px;
+  line-height: 72px;
+  font-weight: 700;
   margin-bottom: 20px;
-  white-space: pre-line; /* to handle the newline in title */
+  white-space: pre-line;
+  color: #253D4E;
 }
 
 .hero-content p {
   font-size: 1.2em;
+  font-weight: 400;
+  color: #7E7E7E;
   margin-bottom: 20px;
 }
 
@@ -32,24 +35,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .subscribe input {
-  padding: 10px;
+  padding: 20px;
   font-size: 1em;
   border: 1px solid #ccc;
-  border-radius: 5px 0 0 5px;
-  outline: none;
+  border-radius: 40px 0 0 40px;
   flex-grow: 1;
+  min-width: 0;
 }
 
 .subscribe button {
-  padding: 10px 20px;
+  color: white !important;
+  padding: 20px;
   font-size: 1em;
   border: none;
-  background-color: #4caf50; /* Adjust the button color to match your design */
+  background-color: #4caf50;
   cursor: pointer;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 40px 40px 0;
   outline: none;
 }
 
@@ -80,5 +85,54 @@ button.next {
 
 button.prev:hover, button.next:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 40px 20px;
+    height: auto;
+  }
+  .hero-content h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .hero-content p {
+    font-size: 1em;
+  }
+  .subscribe input, .subscribe button {
+    padding: 15px;
+    font-size: 0.9em;
+  }
+  button.prev, button.next {
+    font-size: 1.5em;
+    padding: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .hero-container {
+    padding: 20px 10px;
+  }
+  .hero-content h1 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .hero-content p {
+    font-size: 0.9em;
+  }
+  .subscribe {
+    flex-direction: column;
+  }
+  .subscribe input, .subscribe button {
+    width: 100%;
+    border-radius: 40px;
+    margin-bottom: 10px;
+  }
+  .subscribe button {
+    border-radius: 40px;
+  }
+  button.prev, button.next {
+    font-size: 1.2em;
+    padding: 6px;
+  }
 }
 /*# sourceMappingURL=hero.css.map */

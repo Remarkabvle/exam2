@@ -1,21 +1,25 @@
 import React from 'react';
 import './FeaturedProducts.scss';
 import image from '../../assets/b1.png';
+import image2 from '../../assets/b2.png';
+import image3 from '../../assets/b3.png';
+
+
 
 const products = [
     { 
         title: 'Everyday Fresh & Clean with Our Products', 
-        backgroundImage: image, 
+        backgroundImage: `url(${image})`, 
         buttonText: 'Shop Now' 
     },
     { 
         title: 'Make your Breakfast Healthy and Easy', 
-        backgroundImage: image, 
+        backgroundImage: `url(${image2})`, 
         buttonText: 'Shop Now' 
     },
     { 
         title: 'The best Organic Products Online', 
-        backgroundImage: image, 
+        backgroundImage: `url(${image3})`, 
         buttonText: 'Shop Now' 
     }
     
