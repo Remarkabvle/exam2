@@ -44,8 +44,8 @@ const AboutGet = () => {
           <h1>Stay home & get your daily needs from our shop</h1>
           <p>Start Your Daily Shopping with Nest Mart</p>
           <div className="subscription-form">
-            <input type="email" placeholder="Your email address" />
-            <button>Subscribe</button>
+            <input className="oneni" type="email" placeholder="Your email address" />
+            <button className="soka">Subscribe</button>
           </div>
         </div>
         <div className="image-content">

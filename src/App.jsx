@@ -11,6 +11,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CreateProduct from "./pages/admin/create product/CreateProduct";
 import Footer from "./components/footer/Footer";
+import ProductDetail from "./pages/singlePage/SinglePage"; 
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/product/:productId" element={<ProductDetail />} />
         <Route path="/register" element={<Login />} />
 
         <Route path="/" element={<Auth />}>

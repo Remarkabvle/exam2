@@ -28,12 +28,10 @@
   .product-image-section {
     flex: 1 1 40%;
   }
-
   .product-info-section {
     flex: 1 1 60%;
   }
 }
-
 .product-header {
   display: flex;
   flex-direction: column;
@@ -181,8 +179,8 @@
 
 @media (min-width: 768px) {
   .add-to-cart-button,
-  .wishlist-button {
+.wishlist-button {
     margin-top: 0;
   }
 }
-
+/*# sourceMappingURL=single.css.map */

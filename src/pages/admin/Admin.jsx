@@ -4,8 +4,8 @@ import "./Admin.scss";
 import { MapContainer, TileLayer } from "react-leaflet";
 import { Outlet } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
-import ad from '../../assets/AD.png'
-import add from '../../assets/ADD.png'
+import ad from "../../assets/AD.png";
+import add from "../../assets/ADD.png";
 import AboutGet from "../../components/abuotget/AboutGet";
 
 const locations = [
@@ -40,14 +40,16 @@ const Admin = () => {
         <div className="admin-panel-content">
           <div className="admin-panel-header">
             <h1>Admin panel</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-            </p>
+            <div className="admin-panel-information">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              </p>
+            </div>
           </div>
           <div className="admin-panel-sections">
             <div className="section">
@@ -81,10 +83,23 @@ const Admin = () => {
           </div>
         </div>
       </div>
-      {/* <div className="container">
-        <img src={add} alt="" />
-      </div> */}
-      <div className="locations-container container container">
+      <div
+        className="container-map container"
+        // style={{  width:"1200px",  height:"450px", maxWidth: "800px",  margin: "0 auto" }}
+      >
+        <iframe
+          className="map__iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.072884043861!2d69.20123767653914!3d41.28551820230703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8ba578f4f58d%3A0xd7a2ecf23413b7a0!2sNajot%20Ta&#39;lim%20Chilonzor%20Filial!5e0!3m2!1sen!2s!4v1716916261951!5m2!1sen!2s"
+          width="100%"
+          height="100%"
+          style={{ border: "0", boxShadow: "0 4px 8px rgba(0,0,0,0.1)" }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <div className="locations-container container">
         {locations.map((location, index) => (
           <div className="location-card" key={index}>
             <h2>{location.title}</h2>
@@ -146,14 +161,10 @@ const Admin = () => {
           </button>
         </form>
         <div className="contact-image">
-          <img
-            src={ad}
-            alt="Contact Us"
-            className="image"
-          />
+          <img src={ad} alt="Contact Us" className="image" />
         </div>
       </div>
-      <AboutGet/>
+      <AboutGet />
     </>
   );
 };
