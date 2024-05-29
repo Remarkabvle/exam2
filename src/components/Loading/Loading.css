@@ -1,4 +1,4 @@
-.product-skeleton-container {
+.loading-container {
   display: flex;
   flex-wrap: wrap;
   max-width: 1200px;
@@ -13,72 +13,72 @@
           animation: pulse 1.5s infinite;
 }
 
-.skeleton-image-section {
+.loading-image-wrapper {
   flex: 1 1 40%;
   padding: 30px 60px;
 }
 
-.skeleton-image {
+.loading-image {
   width: 100%;
   height: 300px;
   background-color: #e0e0e0;
   border-radius: 10px;
 }
 
-.skeleton-info-section {
+.loading-info-wrapper {
   flex: 1 1 60%;
   padding: 20px;
 }
 
-.skeleton-badge,
-.skeleton-title,
-.skeleton-rating,
-.skeleton-pricing,
-.skeleton-description,
-.skeleton-size-selection,
-.skeleton-controls,
-.skeleton-meta {
+.loading-badge,
+.loading-title,
+.loading-rating,
+.loading-pricing,
+.loading-description,
+.loading-size-selection,
+.loading-controls,
+.loading-meta {
   background-color: #e0e0e0;
   border-radius: 5px;
   margin-bottom: 20px;
 }
 
-.skeleton-badge {
+.loading-badge {
   width: 80px;
   height: 20px;
 }
 
-.skeleton-title {
+.loading-title {
   width: 80%;
   height: 40px;
 }
 
-.skeleton-rating {
+.loading-rating {
   width: 60%;
   height: 20px;
 }
 
-.skeleton-pricing {
+.loading-pricing {
   width: 50%;
   height: 30px;
 }
 
-.skeleton-description {
+.loading-description {
   width: 100%;
   height: 80px;
 }
 
-.skeleton-size-selection {
+.loading-size-selection {
   width: 50%;
   height: 30px;
 }
 
-.skeleton-controls {
+.loading-controls {
   width: 60%;
   height: 40px;
 }
 
-.skeleton-meta {
+.loading-meta {
   width: 100%;
   height: 100px;
 }

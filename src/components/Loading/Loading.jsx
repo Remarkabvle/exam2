@@ -3,19 +3,19 @@ import './Loading.scss';
 
 const Loading = () => {
   return (
-    <div className="product-skeleton-container">
-      <div className="skeleton-image-section">
-        <div className="skeleton-image"></div>
+    <div className="loading-container">
+      <div className="loading-image-wrapper">
+        <div className="loading-image"></div>
       </div>
-      <div className="skeleton-info-section">
-        <div className="skeleton-badge"></div>
-        <div className="skeleton-title"></div>
-        <div className="skeleton-rating"></div>
-        <div className="skeleton-pricing"></div>
-        <div className="skeleton-description"></div>
-        <div className="skeleton-size-selection"></div>
-        <div className="skeleton-controls"></div>
-        <div className="skeleton-meta"></div>
+      <div className="loading-info-wrapper">
+        <div className="loading-badge"></div>
+        <div className="loading-title"></div>
+        <div className="loading-rating"></div>
+        <div className="loading-pricing"></div>
+        <div className="loading-description"></div>
+        <div className="loading-size-selection"></div>
+        <div className="loading-controls"></div>
+        <div className="loading-meta"></div>
       </div>
     </div>
   );
