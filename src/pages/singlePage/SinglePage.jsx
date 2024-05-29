@@ -2,7 +2,9 @@ import "./single.scss";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axiosInstance from "../../api/index";
-import AboutGet from "../../components/abuotget/AboutGet";
+import Loading from "../../components/Loading/Loading";
+import AboutGet from "../../components/abuotget/AboutGet"
+
 
 const ProductDetail = () => {
   const { productId } = useParams();
@@ -31,7 +33,7 @@ const ProductDetail = () => {
     );
   };
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <Loading />;
   if (fetchError) return <p>Error: {fetchError}</p>;
 
   return product ? (
@@ -189,7 +191,7 @@ const ProductDetail = () => {
           <p>Oil separation occurs naturally. May contain pieces of shell.</p>
         </div>
       </div>
-      <AboutGet/>
+      <AboutGet />
     </section>
   ) : null;
 };

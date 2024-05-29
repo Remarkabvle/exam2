@@ -95,6 +95,24 @@ const ProductList = () => {
     ));
   };
 
+  const renderLoading = () => {
+    return Array.from({ length: 8 }).map((_, index) => (
+      <div className="item-card skeleton" key={index}>
+        <div className="skeleton-thumbnail"></div>
+        <div className="item-card-info">
+          <div className="skeleton-category"></div>
+          <div className="skeleton-description"></div>
+          <div className="skeleton-rating"></div>
+          <div className="skeleton-brand"></div>
+          <div className="item-card-footer">
+            <div className="skeleton-price"></div>
+            <div className="skeleton-button"></div>
+          </div>
+        </div>
+      </div>
+    ));
+  };
+
   return (
     <section className="product-list container">
       <div className="product-list-header">
@@ -102,7 +120,7 @@ const ProductList = () => {
         <ul className="category-list">{renderCategories()}</ul>
       </div>
       <div className="product-card-container">
-        {isLoading ? <p>Loading...</p> : renderProductCards()}
+        {isLoading ? renderLoading() : renderProductCards()}
         {fetchError && <p>Error: {fetchError}</p>}
       </div>
     </section>
