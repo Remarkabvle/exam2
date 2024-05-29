@@ -6,7 +6,7 @@ import NavSearchResults from "./SearchModal";
 import mainUrl from '../../api';
 
 const Navbar = () => {
-  const { pathname } = useLocation();
+
   const isLogin = localStorage.getItem("x-auth-token");
   const [value, setValue] = useState("");
   const [data, setData] = useState([]);
