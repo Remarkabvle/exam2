@@ -3,8 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axiosInstance from "../../api/index";
 import Loading from "../../components/Loading/Loading";
-import AboutGet from "../../components/abuotget/AboutGet"
-
+import AboutGet from "../../components/abuotget/AboutGet";
 
 const ProductDetail = () => {
   const { productId } = useParams();
@@ -33,8 +32,12 @@ const ProductDetail = () => {
     );
   };
 
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   if (isLoading) return <Loading />;
   if (fetchError) return <p>Error: {fetchError}</p>;
+
 
   return product ? (
     <section>

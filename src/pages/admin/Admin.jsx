@@ -1,12 +1,11 @@
-import React from "react";
-import Sidebar from "../../components/sidebar/Sidebar";
-import "./Admin.scss";
-import { MapContainer, TileLayer } from "react-leaflet";
+import React, { useEffect } from "react";
 import { Outlet } from "react-router-dom";
+import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
+import AboutGet from "../../components/abuotget/AboutGet";
+import "./Admin.scss";
 import ad from "../../assets/AD.png";
 import add from "../../assets/ADD.png";
-import AboutGet from "../../components/abuotget/AboutGet";
 
 const locations = [
   {
@@ -33,6 +32,10 @@ const locations = [
 ];
 
 const Admin = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   return (
     <>
       <div className="admin-panel container">

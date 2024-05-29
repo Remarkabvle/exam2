@@ -1,19 +1,23 @@
-import React, { memo, useState } from "react";
+import React, { memo, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "../../api";
 import "./login.scss";
-import logo from '../../assets/lgo.svg'; 
+import logo from "../../assets/lgo.svg";
 
 const Login = () => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const [username, setUsername] = useState("kminchelle");
   const [password, setPassword] = useState("0lelplR");
   const [loading, setLoading] = useState(false);
 
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   const handleLogin = (e) => {
     e.preventDefault();
-    let user = { username, password };
+    const user = { username, password };
     setLoading(true);
 
     axios
@@ -56,15 +60,21 @@ const Login = () => {
           <div className="options">
             <div className="op">
               <input type="checkbox" id="rememberMe" />
-              <label htmlFor="rememberMe" className="checkbox-label">Remember Me</label>
+              <label htmlFor="rememberMe" className="checkbox-label">
+                Remember Me
+              </label>
             </div>
-            <a href="/" className="forgot-password">Forgot Password?</a>
+            <a href="/" className="forgot-password">
+              Forgot Password?
+            </a>
           </div>
           <button type="submit" disabled={loading} className="submit-button">
             {loading ? "Loading..." : "Login"}
           </button>
         </form>
-        <a href="/" className="signup-link">Signup?</a>
+        <a href="/" className="signup-link">
+          Signup?
+        </a>
       </div>
     </div>
   );

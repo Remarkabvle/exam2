@@ -3,6 +3,9 @@ import { NavLink } from 'react-router-dom';
 import './NotFound.scss';
 
 const NotFound = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className="not-found-container">
       <div className="not-found-content">
