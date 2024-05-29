@@ -1,3 +1,8 @@
+* {
+  list-style: none !important;
+  text-decoration: none !important;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -42,6 +47,10 @@
   background-color: #fff;
   border-bottom: 1px solid #ccc;
   flex-wrap: wrap;
+}
+
+.custom-header-left .custom-logo {
+  height: 40px;
 }
 
 .custom-header-middle {
@@ -276,5 +285,57 @@
     flex-wrap: wrap;
     text-align: center;
   }
+}
+.custom-header-middle {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.custom-search-input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.nav-search-results {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.nav-search-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-search-card img {
+  margin-right: 10px;
+}
+
+.search-result-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-result-details span {
+  font-weight: bold;
+}
+
+.search-result-details p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #666;
 }
 /*# sourceMappingURL=Navbar.css.map */

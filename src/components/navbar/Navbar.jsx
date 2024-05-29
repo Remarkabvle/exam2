@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import "./Navbar.scss";
-import logo from "../../assets/lgo.svg";
+import logo from "../../assets/lgo.svg"; 
+import NavSearchResults from "./SearchModal";
+import mainUrl from '../../api';
 
 const Navbar = () => {
-  let { pathname } = useLocation();
-  let isLogin = localStorage.getItem("x-auth-token");
+  const { pathname } = useLocation();
+  const isLogin = localStorage.getItem("x-auth-token");
+  const [value, setValue] = useState("");
+  const [data, setData] = useState([]);
 
-
+  useEffect(() => {
+    if (!value.trim()) return;
+    mainUrl
+      .get(`/products/search?q=${value.trim()}`)
+      .then((res) => setData(res.data.products))
+      .catch((err) => console.error(err));
+  }, [value]);
 
   return (
     <>
@@ -40,7 +50,10 @@ const Navbar = () => {
             type="text"
             className="custom-search-input"
             placeholder="Search for items..."
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
           />
+          {value && <NavSearchResults data={data} />}
         </div>
         <div className="custom-header-right">
           <button className="custom-location-button">Your Location</button>
@@ -104,9 +117,6 @@ const Navbar = () => {
         </div>
       </div>
     </>
-    // <h2 className='header__logo'>Logo</h2>
-    // <NavLink className='header__link' to={"/"}>Home</NavLink>
-    // <NavLink className='header__link ' to={"/about"}>About</NavLink>
   );
 };
 
